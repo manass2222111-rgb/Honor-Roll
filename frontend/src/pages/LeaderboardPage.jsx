@@ -127,17 +127,9 @@ export default function LeaderboardPage() {
 
         {/* Leaderboard Cards - Podium Style */}
         <div className="max-w-7xl mx-auto px-4 pb-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
-            {/* Second Place */}
-            <div className="md:order-1 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
-              <LeaderboardCard 
-                data={leaderboardData[1]} 
-                onClick={() => handleCardClick(leaderboardData[1])}
-              />
-            </div>
-            
-            {/* First Place - Elevated */}
-            <div className="md:order-2 md:scale-110 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:items-end">
+            {/* First Place - First on mobile, center on desktop */}
+            <div className="order-1 md:order-2 md:scale-110 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
               <LeaderboardCard 
                 data={leaderboardData[0]} 
                 onClick={() => handleCardClick(leaderboardData[0])}
@@ -145,8 +137,16 @@ export default function LeaderboardPage() {
               />
             </div>
             
-            {/* Third Place */}
-            <div className="md:order-3 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
+            {/* Second Place - Second on mobile, left on desktop */}
+            <div className="order-2 md:order-1 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+              <LeaderboardCard 
+                data={leaderboardData[1]} 
+                onClick={() => handleCardClick(leaderboardData[1])}
+              />
+            </div>
+            
+            {/* Third Place - Third on mobile, right on desktop */}
+            <div className="order-3 md:order-3 animate-fade-in-up" style={{ animationDelay: '0.9s' }}>
               <LeaderboardCard 
                 data={leaderboardData[2]} 
                 onClick={() => handleCardClick(leaderboardData[2])}
