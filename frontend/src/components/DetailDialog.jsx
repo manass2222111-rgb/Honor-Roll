@@ -48,18 +48,18 @@ export default function DetailDialog({ open, onOpenChange, data }) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-2xl glass-card">
-        {/* Close Button - Mobile Friendly */}
+        {/* Close Button - Mobile Friendly - Right side for RTL */}
         <button
           onClick={() => onOpenChange(false)}
           className={cn(
-            "absolute left-4 top-4 rounded-full p-2 transition-colors",
-            "hover:bg-muted active:bg-muted/80",
+            "absolute right-4 top-4 rounded-full p-3 transition-colors z-50",
+            "bg-muted/80 hover:bg-muted active:bg-muted/90",
             "ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
-            "disabled:pointer-events-none"
+            "disabled:pointer-events-none shadow-lg"
           )}
           aria-label="إغلاق"
         >
-          <X className="h-6 w-6 text-muted-foreground" />
+          <X className="h-6 w-6 text-foreground" />
         </button>
 
         <DialogHeader>
