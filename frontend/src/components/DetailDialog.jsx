@@ -151,6 +151,23 @@ export default function DetailDialog({ open, onOpenChange, data }) {
           <span className="text-base font-semibold text-success" style={{ fontFamily: 'Cairo, sans-serif' }}>إنجاز متميز ومبارك</span>
           <Trophy className="w-5 h-5 text-success" />
         </div>
+
+        {/* Back Button - Mobile Optimized */}
+        <div className="mt-6">
+          <Button
+            onClick={() => onOpenChange(false)}
+            className={cn(
+              "w-full h-14 text-lg rounded-xl",
+              colors.icon,
+              "hover:opacity-90 transition-all duration-300",
+              "flex items-center justify-center gap-3"
+            )}
+            style={{ fontFamily: 'Cairo, sans-serif' }}
+          >
+            <ArrowRight className="w-5 h-5" />
+            <span>رجوع إلى اللوحة</span>
+          </Button>
+        </div>
       </DialogContent>
     </Dialog>
   );
