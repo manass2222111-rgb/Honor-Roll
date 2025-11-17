@@ -127,29 +127,22 @@ export default function DetailDialog({ open, onOpenChange, data }) {
           </div>
         </div>
 
-        {/* Description */}
-        <div className="glass-card p-6 rounded-2xl">
-          <div className="flex items-start gap-4">
+        {/* Description - Compact for mobile */}
+        <div className="glass-card p-4 sm:p-6 rounded-xl sm:rounded-2xl">
+          <div className="flex items-start gap-3 sm:gap-4">
             <div className={cn(
-              "p-3 rounded-xl shrink-0",
+              "p-2 sm:p-3 rounded-lg sm:rounded-xl shrink-0",
               colors.icon
             )}>
-              <BookOpen className="w-6 h-6" />
+              <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div>
-              <h4 className="text-lg font-semibold text-foreground mb-2" style={{ fontFamily: 'Cairo, sans-serif' }}>تفاصيل الإنجاز</h4>
-              <p className="text-base text-muted-foreground leading-relaxed" style={{ fontFamily: 'Cairo, sans-serif' }}>
+              <h4 className="text-base sm:text-lg font-semibold text-foreground mb-2" style={{ fontFamily: 'Cairo, sans-serif' }}>تفاصيل الإنجاز</h4>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed" style={{ fontFamily: 'Cairo, sans-serif' }}>
                 {data.details.description}
               </p>
             </div>
           </div>
-        </div>
-
-        {/* Achievement Indicator */}
-        <div className="mt-6 flex items-center justify-center gap-3 p-4 bg-success/10 rounded-2xl border border-success/20">
-          <TrendingUp className="w-5 h-5 text-success" />
-          <span className="text-base font-semibold text-success" style={{ fontFamily: 'Cairo, sans-serif' }}>إنجاز متميز ومبارك</span>
-          <Trophy className="w-5 h-5 text-success" />
         </div>
 
         {/* Back Button - Mobile Optimized */}
