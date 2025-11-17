@@ -86,44 +86,44 @@ export default function DetailDialog({ open, onOpenChange, data }) {
         <Separator className="my-6" />
 
         {/* Statistics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          <div className="glass-card p-6 rounded-2xl text-center animate-scale-in">
+        <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-6">
+          <div className="glass-card p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center animate-scale-in">
             <div className={cn(
-              "inline-flex items-center justify-center w-14 h-14 rounded-xl mb-3",
+              "inline-flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl mb-2 sm:mb-3",
               colors.icon
             )}>
-              <Users className="w-7 h-7" />
+              <Users className="w-5 h-5 sm:w-7 sm:h-7" />
             </div>
-            <div className="text-3xl font-bold text-foreground mb-1" style={{ fontFamily: 'Cairo, sans-serif' }}>
+            <div className="text-2xl sm:text-3xl font-bold text-foreground mb-1" style={{ fontFamily: 'Cairo, sans-serif' }}>
               {data.totalStudents}
             </div>
-            <div className="text-sm text-muted-foreground" style={{ fontFamily: 'Cairo, sans-serif' }}>إجمالي الطلاب</div>
+            <div className="text-xs sm:text-sm text-muted-foreground" style={{ fontFamily: 'Cairo, sans-serif' }}>إجمالي</div>
           </div>
 
-          <div className="glass-card p-6 rounded-2xl text-center animate-scale-in" style={{ animationDelay: '0.1s' }}>
+          <div className="glass-card p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center animate-scale-in" style={{ animationDelay: '0.1s' }}>
             <div className={cn(
-              "inline-flex items-center justify-center w-14 h-14 rounded-xl mb-3",
+              "inline-flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl mb-2 sm:mb-3",
               colors.icon
             )}>
-              <Calendar className="w-7 h-7" />
+              <Calendar className="w-5 h-5 sm:w-7 sm:h-7" />
             </div>
-            <div className="text-3xl font-bold text-foreground mb-1" style={{ fontFamily: 'Cairo, sans-serif' }}>
+            <div className="text-2xl sm:text-3xl font-bold text-foreground mb-1" style={{ fontFamily: 'Cairo, sans-serif' }}>
               {data.details.monthlyAchievement}
             </div>
-            <div className="text-sm text-muted-foreground" style={{ fontFamily: 'Cairo, sans-serif' }}>إنجاز شهر 11</div>
+            <div className="text-xs sm:text-sm text-muted-foreground" style={{ fontFamily: 'Cairo, sans-serif' }}>شهر 11</div>
           </div>
 
-          <div className="glass-card p-6 rounded-2xl text-center animate-scale-in" style={{ animationDelay: '0.2s' }}>
+          <div className="glass-card p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center animate-scale-in" style={{ animationDelay: '0.2s' }}>
             <div className={cn(
-              "inline-flex items-center justify-center w-14 h-14 rounded-xl mb-3",
+              "inline-flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl mb-2 sm:mb-3",
               colors.icon
             )}>
-              <Award className="w-7 h-7" />
+              <Award className="w-5 h-5 sm:w-7 sm:h-7" />
             </div>
-            <div className="text-3xl font-bold text-foreground mb-1" style={{ fontFamily: 'Cairo, sans-serif' }}>
+            <div className="text-2xl sm:text-3xl font-bold text-foreground mb-1" style={{ fontFamily: 'Cairo, sans-serif' }}>
               {data.details.levelAchievement}
             </div>
-            <div className="text-sm text-muted-foreground" style={{ fontFamily: 'Cairo, sans-serif' }}>إنجاز المستويات</div>
+            <div className="text-xs sm:text-sm text-muted-foreground" style={{ fontFamily: 'Cairo, sans-serif' }}>المستويات</div>
           </div>
         </div>
 
