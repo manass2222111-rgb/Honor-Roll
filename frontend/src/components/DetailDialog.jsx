@@ -7,7 +7,8 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Trophy, Users, Calendar, Award, TrendingUp, BookOpen } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Trophy, Users, Calendar, Award, TrendingUp, BookOpen, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function DetailDialog({ open, onOpenChange, data }) {
