@@ -63,13 +63,13 @@ export default function DetailDialog({ open, onOpenChange, data }) {
         </button>
 
         <DialogHeader>
-          <div className="flex items-center gap-4 mb-4 pr-8">
-            <div className="text-6xl">{data.medal}</div>
+          <div className="flex items-center gap-4 mb-4 pl-12">
+            <div className="text-5xl sm:text-6xl">{data.medal}</div>
             <div className="flex-1">
-              <DialogTitle className="text-3xl mb-2" style={{ fontFamily: 'Cairo, sans-serif' }}>
+              <DialogTitle className="text-2xl sm:text-3xl mb-2" style={{ fontFamily: 'Cairo, sans-serif' }}>
                 {data.teacher}
               </DialogTitle>
-              <DialogDescription className="text-lg" style={{ fontFamily: 'Cairo, sans-serif' }}>
+              <DialogDescription className="text-base sm:text-lg" style={{ fontFamily: 'Cairo, sans-serif' }}>
                 {data.circle}
               </DialogDescription>
             </div>
